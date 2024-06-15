@@ -19,6 +19,7 @@
         <check.latest.version>3.1.1</check.latest.version>
     </properties>
 
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
