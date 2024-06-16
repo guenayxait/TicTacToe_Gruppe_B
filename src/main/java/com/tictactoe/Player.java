@@ -1,4 +1,4 @@
-package main.java.com.tictactoe;
+package com.tictactoe;
 
 public class Player {
     // variables
