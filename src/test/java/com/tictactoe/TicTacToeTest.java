@@ -26,9 +26,4 @@ public class TicTacToeTest {
         currentPlayer = player2;
         assertEquals(player2, currentPlayer);
     }
-
-
-    public static void main(String[] args) {
-        org.junit.runner.JUnitCore.main("com.tictactoe.TicTacToeTest");
-    }
 }
