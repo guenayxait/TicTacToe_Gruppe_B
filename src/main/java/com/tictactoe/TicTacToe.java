@@ -14,7 +14,7 @@ public class TicTacToe {
         TicTacToe game = new TicTacToe();
         //game.start();
 
-        System.out.println("Current Player: X");
+        System.out.println("Current Player: " + currentPlayer.getMarker());
 
         // print empty board
         board.print();
@@ -33,7 +33,10 @@ public class TicTacToe {
                 // print board
                 board.print();
                 // check if there is a winner
-                //if (hasWinner()) {
+                if (hasWinner()) {
+                    System.out.println("Player " + currentPlayer.getMarker() + " wins!");
+                    break;
+                }
                 // check if board is full
                 if (board.isFull()) {
                     System.out.println("It's a tie!");
@@ -57,7 +60,21 @@ public class TicTacToe {
         }
     }
 
-    //private static boolean hasWinner() {}
+    private static boolean hasWinner() {
+        char check = currentPlayer.getMarker();
+
+        //check rows and columns
+        for (int i = 0; i < 3; i++) {
+            if ((board.cells[i][0] == check && board.cells[i][1] == check && board.cells[i][2] == check) ||
+                    (board.cells[0][i] == check && board.cells[1][i] == check && board.cells[2][i] == check)) {
+                return true;
+            }
+        }
+
+        //check diagonals
+        return (board.cells[0][0] == check && board.cells[1][1] == check && board.cells[2][2] == check) ||
+                (board.cells[0][2] == check && board.cells[1][1] == check && board.cells[2][0] == check);
+    }
 
     //private void start() {}
 
