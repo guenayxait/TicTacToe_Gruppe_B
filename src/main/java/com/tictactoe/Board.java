@@ -13,7 +13,6 @@ public class Board {
         return cells[x][y] == ' ';
     }
 
-
     // place marker on the board,  void place(int x, int y, char marker)
     public void place(int x, int y, char marker) {
         cells[x][y] = marker;
