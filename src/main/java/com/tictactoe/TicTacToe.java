@@ -7,7 +7,7 @@ public class TicTacToe {
     static Player player1;
     static Player player2;
     static Player currentPlayer;
-    static Board board;
+    static Board board = new Board();
 
     // Create Main Method
     public static void main(String[] args) {
@@ -40,9 +40,7 @@ public class TicTacToe {
         }
     }
 
-    static boolean hasWinner() {
-        char check = currentPlayer.getMarker();
-
+    static boolean hasWinner(char check) {
         //check rows and columns
         for (int i = 0; i < 3; i++) {
             if ((board.cells[i][0] == check && board.cells[i][1] == check && board.cells[i][2] == check) ||
@@ -86,7 +84,7 @@ public class TicTacToe {
                 // print board
                 board.print();
                 // check if there is a winner
-                if (hasWinner()) {
+                if (hasWinner(currentPlayer.getMarker())) {
                     System.out.println("Player " + currentPlayer.getMarker() + " wins!");
                     gameOngoing = false;
                 }

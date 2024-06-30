@@ -34,7 +34,7 @@ public class TicTacToeTest {
         TicTacToe.board.place(0,1,'X');
         TicTacToe.board.place(0,2,'X');
 
-        assertTrue(TicTacToe.hasWinner());
+        assertTrue(TicTacToe.hasWinner('X'));
     }
 
     @Test
@@ -44,7 +44,7 @@ public class TicTacToeTest {
         TicTacToe.board.place(1,0,'X');
         TicTacToe.board.place(2,0,'X');
 
-        assertTrue(TicTacToe.hasWinner());
+        assertTrue(TicTacToe.hasWinner('X'));
     }
 
     @Test
@@ -54,7 +54,7 @@ public class TicTacToeTest {
         TicTacToe.board.place(1,1,'X');
         TicTacToe.board.place(2,2,'X');
 
-        assertTrue(TicTacToe.hasWinner());
+        assertTrue(TicTacToe.hasWinner('X'));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class TicTacToeTest {
         TicTacToe.board.place(1,1,'X');
         TicTacToe.board.place(2,0,'X');
 
-        assertTrue(TicTacToe.hasWinner());
+        assertTrue(TicTacToe.hasWinner('X'));
     }
 
     @Test
@@ -80,7 +80,7 @@ public class TicTacToeTest {
         TicTacToe.board.place(0,1,'X');
         TicTacToe.board.place(0,2,'O');
 
-        assertFalse(TicTacToe.hasWinner());
+        assertFalse(TicTacToe.hasWinner('X') && TicTacToe.hasWinner('O'));
     }
 
 
