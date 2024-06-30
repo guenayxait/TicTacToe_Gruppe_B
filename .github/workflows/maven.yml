@@ -33,5 +33,5 @@ jobs:
     - name: upload JAR
       uses: actions/upload-artifact@v4.3.3
       with:
-        name: Calculator
+        name: TicTacToe
         path: target/TicTacToe-*.jar
