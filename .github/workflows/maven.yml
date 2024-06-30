@@ -34,4 +34,4 @@ jobs:
       uses: actions/upload-artifact@v4.3.3
       with:
         name: TicTacToe
-        path: target/TicTacToe-*.jar
+        path: ../target/TicTacToe-*.jar
