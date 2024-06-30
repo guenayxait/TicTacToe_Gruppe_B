@@ -60,7 +60,7 @@ public class TicTacToe {
         }
     }
 
-    private static boolean hasWinner() {
+    static boolean hasWinner() {
         char check = currentPlayer.getMarker();
 
         //check rows and columns
