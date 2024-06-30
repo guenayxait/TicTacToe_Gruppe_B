@@ -29,15 +29,9 @@ jobs:
         cache: maven
     - name: build Java project
       run: mvn package
-
-    - name: List project root directory
-      run: ls -la
-
-    - name: List target directory
-      run: ls -la target
             
     - name: upload JAR
       uses: actions/upload-artifact@v4.3.3
       with:
         name: TicTacToe
-        path: /target/TicTacToe-*.jar
+        path: /target/tictactoe-*.jar
